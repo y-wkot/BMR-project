@@ -1,0 +1,37 @@
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.page-container h1,
+.page-container h2 {
+  margin-bottom: 1.5rem;
+}
+
+.page-container button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.page-container input {
+  display: block; /* ブロック要素にする */
+  margin: 0 auto; /* 自動マージンで中央揃え */
+  width: 30%; /* 幅を指定（必要に応じて調整） */
+  padding: 0.5rem; /* パディングを追加 */
+  border: 1px solid #ccc; /* ボーダーを追加 */
+  border-radius: 4px; /* 角を丸くする */
+}
+.page-container select {
+  display: block; /* ブロック要素にする */
+  margin: 0 auto; /* 自動マージンで中央揃え */
+  width: 25%; /* 幅を指定（必要に応じて調整） */
+  padding: 0.5rem; /* パディングを追加 */
+  border: 1px solid #ccc; /* ボーダーを追加 */
+  border-radius: 4px; /* 角を丸くする */
+}
