@@ -1,5 +1,5 @@
 package com.example.demo.dto;
-
+//てすと
 public class BmrRequest {
 	private String gender; // 性別
 	private int age; // 年齢
