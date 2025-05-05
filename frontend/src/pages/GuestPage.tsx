@@ -41,7 +41,7 @@ const GuestPage: React.FC = () => {
       return;
     }
     if (age <= 0 || height <= 0 || weight <= 0 || intensity <= 0) {
-      alert("すべての数値は正の値を入力してください！");
+      alert("すべての数値は正の値を入力してください！"); // マイナスを入れない
       return;
     }
 
