@@ -1,11 +1,6 @@
-# Java 17 の軽量イメージをベースにする
-FROM openjdk:17-jdk-slim
-
-# jarファイルをコンテナにコピー（build後にtargetに生成される）
-COPY target/*.jar app.jar
-
-# アプリケーションを実行する
-ENTRYPOINT ["java", "-jar", "/app.jar"]
-
-# Spring Boot のデフォルトポート
-EXPOSE 8080
+# Dockerfile for Spring Boot (Maven)
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
