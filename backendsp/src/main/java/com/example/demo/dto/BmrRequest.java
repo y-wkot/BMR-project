@@ -1,5 +1,5 @@
 package com.example.demo.dto;
-//てすとa
+
 public class BmrRequest {
 	private String gender; // 性別
 	private int age; // 年齢
@@ -7,7 +7,6 @@ public class BmrRequest {
 	private double weight; // 体重
 	private double exerciseIntensity; //運動強度
 
-	// getter & setter
 	public String getGender() {
 		return gender;
 	}

@@ -19,10 +19,8 @@ bmr-project/
 │ │ │ └── GuestPage.tsx
 │ │ └── utils/
 │ │ └── calculateBmr.ts (旧コード or テスト用)
+properties
 
-yaml
-コピーする
-編集する
 
 ---
 
