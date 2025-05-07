@@ -1,26 +1,17 @@
-# 無視するファイル・ディレクトリ
-target/
-*.log
-*.tmp
-.git/
-.gitignore
-
-
-# Node modules and dependencies
-node_modules
-# target/
-
-# Maven-specific files
-*.m2
-*.settings
-
-# Git-related files
+# Git関連ファイルはDockerに不要
 .git
 .gitignore
 
-# IDE/Editor files
-*.idea
-*.vscode
+# OS・IDE関連
 .DS_Store
+.idea
+*.iml
+.vscode/
 
-# その他、Dockerイメージに不要な一時ファイルや設定ファイルも追加可能です。
+# ローカルに生成されるビルド成果物
+target/
+*.log
+*.class
+
+# その他の無駄なファイル
+*.swp
