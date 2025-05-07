@@ -14,7 +14,8 @@ const GuestPfcPage: React.FC = () => {
 
   const fetchPfc = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/api/pfc", {
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
+      const response = await axios.post(`${apiUrl}/api/pfc`, {
         weight,
         bmr,
       });

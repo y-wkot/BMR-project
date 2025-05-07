@@ -57,8 +57,10 @@ const GuestPage: React.FC = () => {
       setLoading(true);
       setError(false);
 
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
       const response = await axios.post<BmrResponse>(
-        "http://localhost:8080/api/calculate",
+        `${apiUrl}/api/calculate`,
         requestData
       );
 
