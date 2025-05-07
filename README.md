@@ -2,7 +2,7 @@
 
 BMR（基礎代謝量）を計算し、ゲストおよびログインユーザー向けにPFCバランス（タンパク質・脂質・炭水化物）の目標値を表示・保存できるWebアプリケーションです。
 
-- アプリ公開先（Render）: [https://example.onrender.com](https://example.onrender.com)
+- アプリ公開先（Render）: [https://example.onrender.com](https://bmr-frontend.onrender.com/)
 
 ## 🛠 技術スタック
 
