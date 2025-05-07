@@ -13,6 +13,6 @@ public class PfcService {
   public void save(int userId, PfcRequest request) {
 //    String sql = "UPDATE member_info SET weight=?, bmr=?, protein_factor=?, fat=?, carb=? WHERE id=?";
 //    jdbc.update(sql,request.getWeight(),request.getBmr(),request.getProteinFactor(),request.getFatGram(),request.getCarbGram(),      // 同上
-//    		  userId);
+//    		  userId);　同上
   }
 }

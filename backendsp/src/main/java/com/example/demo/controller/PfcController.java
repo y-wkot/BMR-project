@@ -25,7 +25,7 @@ public class PfcController {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("ログインしていません");
     }
 
-//    pfcService.save(userId, request);　同じく
+//    pfcService.save(userId, request);　同上
     return ResponseEntity.ok("保存完了");
   }
 }
