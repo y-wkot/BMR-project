@@ -4,7 +4,7 @@
 
 🔗 **アプリ公開 URL（Render）**: [https://bmr-frontend.onrender.com](https://bmr-frontend.onrender.com)
 
----
+```
 
 ## 📁 プロジェクト構成
 
@@ -43,7 +43,7 @@ bmr-project/
 | TypeScript                 | REST API / DTO / JPA           | Docker                 |
 | CSS Modules（基本 CSS）    | Spring Security（予定）        | MySQL（Render 予定）   |
 
----
+```
 
 ## 📦 主な機能
 
