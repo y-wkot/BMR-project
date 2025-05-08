@@ -27,6 +27,7 @@ const GuestPage: React.FC = () => {
   const [bmr, setBmr] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
+  const [isFirstRequest, setIsFirstRequest] = useState<boolean>(true);
 
   // 基礎代謝計算
   const handleCalculate = async () => {
@@ -71,6 +72,7 @@ const GuestPage: React.FC = () => {
       alert("サーバーエラーが発生しました");
     } finally {
       setLoading(false);
+      setIsFirstRequest(false); // 通信後に初回フラグをオフ
     }
   };
 
@@ -137,6 +139,13 @@ const GuestPage: React.FC = () => {
       <button onClick={handleCalculate} disabled={loading}>
         {loading ? "計算中…" : "計算開始"}
       </button>
+
+      {/* 初回通信中だけ表示 */}
+      {loading && isFirstRequest && (
+        <p style={{ color: "orange" }}>
+          初回アクセス時はサーバーの起動により、応答に1分程度かかる場合があります…
+        </p>
+      )}
 
       {/* 計算結果表示 */}
       {bmr !== null && !error && (
