@@ -8,7 +8,7 @@ const WelcomePage: React.FC = () => {
   return (
     <div className="page-container">
       <h1>基礎代謝計算・体重管理アプリへようこそ</h1>
-      <h2>未実装のページもあります。</h2>
+      <h2>会員登録機能とログイン機能は実装中です。</h2>
 
       <button onClick={() => navigate("/login")}>ログインして利用</button>
       <button onClick={() => navigate("/register")}>会員登録</button>
