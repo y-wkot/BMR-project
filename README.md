@@ -41,7 +41,7 @@ bmr-project/
 |----------------------------|--------------------------------|------------------------|
 | React + Vite               | Spring Boot (Java 17)          | Render                 |
 | TypeScript                 | REST API / DTO / JPA           | Docker                 |
-| CSS Modules（基本 CSS）    | Spring Security（予定）        | MySQL（Render 予定）   |
+| CSS Modules（基本 CSS）    | Spring Security（予定）        | MySQL（Render不可 PlanetScale検討）   |
 
 ```
 
