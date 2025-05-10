@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/basic.css";
 
-// 型定義
+// 型定義（リクエストの）
 interface BmrRequest {
   gender: string;
   age: number;
@@ -11,7 +11,7 @@ interface BmrRequest {
   weight: number;
   exerciseIntensity: number;
 }
-
+// レスポンスの型
 interface BmrResponse {
   bmr: number;
 }
@@ -27,9 +27,9 @@ const GuestPage: React.FC = () => {
   const [bmr, setBmr] = useState<number | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-  const [isFirstRequest, setIsFirstRequest] = useState<boolean>(true);
+  const [isFirstRequest, setIsFirstRequest] = useState<boolean>(true); // 初回通信が時間かかるので初回判定させる
 
-  // 基礎代謝計算
+  // 計算の処理
   const handleCalculate = async () => {
     if (
       !gender ||
@@ -46,6 +46,7 @@ const GuestPage: React.FC = () => {
       return;
     }
 
+    // リクエストデータ
     const requestData: BmrRequest = {
       gender,
       age: Number(age),
@@ -60,11 +61,13 @@ const GuestPage: React.FC = () => {
 
       const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
 
+      // リクエスト送信（POST)
       const response = await axios.post<BmrResponse>(
         `${apiUrl}/api/calculate`,
         requestData
       );
 
+      // レスポンスを保存
       setBmr(response.data.bmr);
     } catch (err) {
       console.error("BMR計算中にエラー:", err);
@@ -76,6 +79,7 @@ const GuestPage: React.FC = () => {
     }
   };
 
+  // PFCページへ遷移(BMRと体重を渡す)
   const goToPFC = () => {
     if (bmr !== null && weight !== "") {
       navigate("/pfcCalculator", {
@@ -167,7 +171,7 @@ interface InputFieldProps {
   setValue: React.Dispatch<React.SetStateAction<number | "">>;
   type: string;
   placeholder: string;
-  step?: string; // 任意のプロパティ
+  step?: string;
 }
 
 const InputField: React.FC<InputFieldProps> = ({

@@ -1,20 +1,24 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom"; // 値の受け渡し（前頁から）
 import "../css/basic.css";
 
+// ゲスト用PFC計算
 const GuestPfcPage: React.FC = () => {
   const location = useLocation();
   const { weight, bmr } = location.state;
 
+  // 各栄養素と合計値
   const [protein, setProtein] = useState(0);
   const [fat, setFat] = useState(0);
   const [carb, setCarb] = useState(0);
-  const [totalCalories, setTotalCalories] = useState(0);
+  const [totalCalories, setTotalCalories] = useState(0); // BMRと体重が入る
 
   const fetchPfc = async () => {
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8080"; // ローカルと本番どちらでも対応 .envで設定
+
+      // サーバーへ値を渡す
       const response = await axios.post(`${apiUrl}/api/pfc`, {
         weight,
         bmr,
