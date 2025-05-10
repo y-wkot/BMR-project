@@ -14,11 +14,11 @@ import com.example.demo.service.PfcCalculatorService;
 @RequestMapping("/api/pfc")
 public class GuestPfcController {
 
-    @Autowired
+    @Autowired // PfcCalculatorServiceをDIする（DIとは・・・）
     private PfcCalculatorService service;
 
     @PostMapping
     public PfcResponse calculatePfc(@RequestBody PfcRequest req) {
-        return service.calculate(req);
+        return service.calculate(req); // serviceのクラスにリターン
     }
 }

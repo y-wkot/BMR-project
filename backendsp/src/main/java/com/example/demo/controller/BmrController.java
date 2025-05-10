@@ -8,14 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dto.BmrRequest;
 import com.example.demo.dto.BmrResponse;
 
-@RestController
-@RequestMapping("/api")
+@RestController // REST APIのコントローラとして機能
+@RequestMapping("/api") // URLパスのベースは/api
 public class BmrController {
 
-    @PostMapping("/calculate")
+    @PostMapping("/calculate") // POSTリクエスト/api/calculateから受け取り、BMRを計算して返すよ
     public BmrResponse calculate(@RequestBody BmrRequest request) {
         double bmr;
 
+        // 有名なハリスベネディクト計算式だよ☆
         if ("man".equalsIgnoreCase(request.getGender())) {
             bmr = 13.397 * request.getWeight() + 4.799 * request.getHeight()
                     - 5.677 * request.getAge() + 88.362;
@@ -24,7 +25,7 @@ public class BmrController {
                     - 4.33 * request.getAge() + 447.593;
         }
 
-        bmr *= request.getExerciseIntensity();
-        return new BmrResponse(bmr);
+        bmr *= request.getExerciseIntensity(); // 運動強度をかけるよ！
+        return new BmrResponse(bmr); // BmrResponseにリターンするよ！
     }
 }

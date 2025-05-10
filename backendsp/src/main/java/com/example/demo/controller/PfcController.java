@@ -16,11 +16,11 @@ import com.example.demo.dto.PfcRequest;
 public class PfcController {
 
 //  @Autowired
-//  private PfcService pfcService; データベース未実装のためスキップさせる
+//  private PfcService pfcService; データベース未実装のためスキップさせる　renderでmysql使えない どうしよう
 
-  @PostMapping("/save")
+  @PostMapping("/save") // PFC計算結果を保存する
   public ResponseEntity<?> savePfc(@RequestBody PfcRequest request, HttpSession session) {
-    Integer userId = (Integer) session.getAttribute("userId");
+    Integer userId = (Integer) session.getAttribute("userId"); // ログインユーザーのIDを取得する（今は動いてない）
     if (userId == null) {
       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("ログインしていません");
     }
