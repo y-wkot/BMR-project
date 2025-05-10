@@ -1,6 +1,7 @@
 # BMR 計算＆PFC バランス管理アプリ
 
 本アプリは、基礎代謝量（BMR）を計算し、PFC バランス（タンパク質・脂質・炭水化物）の目標値をゲストまたは会員ユーザー別に表示・保存できる Web アプリケーションです。
+（現在はゲスト利用機能が使えます）
 
 🔗 **アプリ公開 URL（Render）**: [https://bmr-frontend.onrender.com](https://bmr-frontend.onrender.com)
 
