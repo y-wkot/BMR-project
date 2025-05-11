@@ -38,11 +38,23 @@ bmr-project/
 
 ## 🛠 技術スタック
 
-| フロントエンド             | バックエンド                   | インフラ              |
-|----------------------------|--------------------------------|------------------------|
-| React + Vite               | Spring Boot (Java 17)          | Render                 |
-| TypeScript                 | REST API / DTO / JPA           | Docker                 |
-| CSS Modules（基本 CSS）    | Spring Security（予定）        | MySQL（Render不可 PlanetScale検討）   |
+| フロントエンド                          | バックエンド                      | インフラ                             |
+| ---------------------------------- | --------------------------------- | -------------------------------------- |
+| React 19 + Create React App（CRA） | Spring Boot 3.4.5（Java 17）       | Render（デプロイ）                      |
+| TypeScript 4.9.5                   | REST API / DTO / JPA              | Docker (27.3.1)                        |
+| CSS Modules（通常の CSS）           | Spring Security（導入予定）        | MySQL（Render不可 → PlanetScaleを検討） |
+
+Node.js：v18：環境構築のために使用
+npm：v9
+React：v19.1.0
+react-router-dom：v7.5.3
+TypeScript：v4.9.5
+React Scripts (CRA)：v5.0.1（Viteではない）
+axios：v1.9.0
+Java：17
+Spring Boot：3.4.5
+IDE：Visual Studio Code / Eclipse
+
 
 ```
 
